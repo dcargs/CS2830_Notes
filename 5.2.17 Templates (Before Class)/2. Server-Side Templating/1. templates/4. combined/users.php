@@ -35,8 +35,8 @@ function buildMenu() {
 	$menuItems = array();
 	$menuItems[] = array('label' => 'Home', 'link' => 'index.php');
 	$menuItems[] = array('label' => 'Users', 'link' => 'users.php');
-	
 
+	$currentPage = 'Users';
 	$menu = new MenuComponent($menuItems, $currentPage);
 	return $menu->generate();
 }
@@ -46,8 +46,8 @@ function buildContent() {
 	$users[] = array('school' => 'MU', 'name' => 'John Smith', 'age' => 24, 'gender' => 'male');
 	$users[] = array('school' => 'KU', 'name' => 'Sally Smith', 'age' => 25, 'gender' => 'female');
 	$users[] = array('school' => 'KSU', 'name' => 'Karen Smith', 'age' => 23, 'gender' => 'female');
-	
-	
+
+
 	$content = new Template();
 	$content->users = $users;
 	return $content->build('usersTable.tmpl');

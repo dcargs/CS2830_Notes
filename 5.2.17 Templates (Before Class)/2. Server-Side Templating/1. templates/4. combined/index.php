@@ -36,7 +36,7 @@ function buildMenu() {
 	$menuItems[] = array('label' => 'Home', 'link' => 'index.php');
 	$menuItems[] = array('label' => 'Users', 'link' => 'users.php');
 
-	$currentPage = $_SERVER['PHP_SELF'];
+	$currentPage = 'Home';
 	$menu = new MenuComponent($menuItems, $currentPage);
 	return $menu->generate();
 }
