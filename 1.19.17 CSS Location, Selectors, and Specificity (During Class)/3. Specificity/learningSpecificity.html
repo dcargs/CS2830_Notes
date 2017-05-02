@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- Generally Speaking we can say that all styles with "cascade",
+      where one has the highest priority:
+
+      1) Inline (inside HTML element)
+      2) External and internal (in the head)
+        *whichever one is loaded last will be the one with the highest
+        priority
+      3) Browser default
+-->
+
+<html>
+  <head>
+    <title>Specificity</title>
+
+  <!-- External -->
+  <link rel="stylesheet" type="text/css" href="learningSpecificity.css">
+
+  <!-- Internal -->
+  <style>
+    body div h1 {
+      color: green;
+    }
+
+    h1 {
+      color: red;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    #header {
+      color: orange;
+    }
+
+    .cool {
+      color: pink;
+    }
+  </style>
+
+  </head>
+
+  <body>
+    <div>
+      <h1 id="header" class="pink">Specificity determines what css is applied  </h1>
+    </div>
+  </body>
+
+</html>

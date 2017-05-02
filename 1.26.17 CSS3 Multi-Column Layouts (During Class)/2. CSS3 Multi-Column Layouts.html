@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- The main purpose is to show you css3 techniques and to show you how to
+		create multiple columns using these techniques -->
+
+
+<!-- References:
+    1)    http://www.w3schools.com/css/css3_multiple_columns.asp
+    2)    http://www.w3.org/TR/css3-multicol/
+    3)    https://css-tricks.com/almanac/properties/c/columns/
+-->
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>CSS3 Columns</title>
+		<style>
+
+			#columnWrapper {
+				border: 10px solid orange;
+				border-radius: 100px;
+				padding: 30px;
+				/* second parameter auto will center it on the page */
+				margin: 50px auto;
+
+				/* these three do the same thing */
+				column-count: 3; /* default */
+				-webkit-column-count: 3; /* chome, safari, opera */
+				-moz-column-count: 3; /* firefox */
+
+				column-gap: 15px;
+				-webkit-column-gap: 15px;
+				-moz-column-gap: 15px;
+
+				/* unknown css properties are ignored */
+				dudewheremycar: totally;
+
+				column-rule: 2px solid slategrey;
+				-webkit-column-rule: 2px solid slategrey;
+				-moz-columb-rule: 2px solid slategrey;
+			}
+
+			#header {
+				text-align: center;
+				column-span: all;
+			}
+
+			hr {
+				border-top: 2px solid slategrey;
+				column-span: all;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="columnWrapper">
+			<h1 id="header">Web Development CS2830</h1>
+
+            <hr><!-- This is making the line across the top of the columns below the h1 -->
+
+            <div>Computer science is the scientific and practical approach to
+			computation and its applications. It is the systematic study of the feasibility,
+			structure, expression, and mechanization of the methodical procedures (or algorithms)
+			 that underlie the acquisition, representation, processing, storage, communication
+			 of, and access to information. An alternate, more succinct definition of computer
+			 science is the study of automating algorithmic processes that scale. A computer
+			 scientist specializes in the theory of computation and the design of computational
+			 systems. ts fields can be divided into a variety of theoretical and practical
+			 disciplines. Some fields, such as computational complexity theory, are highly
+			 abstract, while fields such as computer graphics and Web Development emphasize
+			 real-world visual applications</div>
+
+            <div>Information technology (IT) is the application of computers
+			and internet to store, retrieve, transmit, and manipulate data,[1] or an information
+			 often in the context of a business or other enterprise.[2] IT is considered a
+			 subset of information and communications technology (ICT). In 2012, Zuppo proposed
+			 an ICT hierarchy where each hierarchy level "contain some degree of commonality in
+			 that they are related to technologies that facilitate the transfer of information
+			 and various types of electronically mediated communications."[3] Business/IT was
+			 one level of the ICT hierarchy.</div>
+
+            <div>Web development is a broad term for the work involved in
+			developing a web site for the Internet (World Wide Web) or an intranet
+			(a private network). Web development can range from developing the simplest
+			static single page of plain text to the most complex web-based internet
+			applications, electronic businesses, and social network services. A more
+			comprehensive list of tasks to which web development commonly refers, may
+			include web engineering, web design, web content development, client liaison,
+			client-side/server-side scripting, web server and network security configuration,
+			 and e-commerce development. Among web professionals, "web development" usually
+			  refers to the main non-design aspects of building web sites: writing markup
+			  and coding.</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Columns Float</title>
+        <style>
+            /* Note:
+                The float property specifies wheather or not an
+                element should float
+
+                The clear property is used to control the behavior
+                of floating elements
+
+                In the simplest form, float can be used to wrap text around
+                images or have two divs float next to each other
+            */
+
+            /* physical width = 210 (200 width + 5 border on each side) */
+            #left {
+              float: left;
+              width: 200px;
+              min-height: 250px;
+              border: 5px solid pink;
+            }
+
+
+            /* physical width = 310 px */
+            #middle, #right {
+              float: left;
+              width: 300px;
+              min-height: 250px;
+              border: 5px solid purple;
+            }
+
+            /* total physical width = 830px */
+
+            #columns {
+              width: 830px;
+              border: 5px solid powderblue;
+            }
+
+            .group:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+            <div id="right">Right</div>
+
+            <!-- Below are two ways to clear float -->
+            <!--<div class="clear"></div>-->
+            <!--<br class="clear">-->
+        </div>
+    </body>
+</html>

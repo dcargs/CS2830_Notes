@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- This document was created by Professor Wergeles on February 16, 2017 -->
+
+<!-- Main Purpose: To show the diffent locations the jQuery library can be called.
+		And the different ways to call the library. -->
+
+<!-- References:
+		1) http://www.w3schools.com/jquery/default.asp
+		2) http://www.w3schools.com/jquery/jquery_get_started.asp
+		3) http://www.w3schools.com/jquery/jquery_syntax.asp
+-->
+<html>
+	<head>
+		<title>jQuery Location</title>
+        <!-- local copy -->
+				<script src="jslibs/jquery-2.1.4.min.js"></script>
+
+				<!-- can use Content Distribution Network (CDN) -->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+				<!-- We can use jQuery throught the single, global function call 'jQuery' -->
+				<script>
+					console.dir(jQuery);
+					//jQuery() <-- we'll be using that a bunch
+
+					/* $ is a valid variable name in JavaScript after you import the jQuery
+					library. jQuery uses it as an alias so you don't have to type out jQuery
+					all of the time. */
+
+					console.dir($);
+
+					$.noConflict();
+					//frees up the global $ variable
+				</script>
+
+	</head>
+	<body>
+	</body>
+</html>

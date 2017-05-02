@@ -1,0 +1,9 @@
+/* in an external css file, you do not need the <style> tags */
+h1 {
+  color: powderblue;
+  text-align: right;
+}
+
+p {
+  background-color: yellow;
+}

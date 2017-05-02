@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- This document was created by Professor Wergeles on February 7, 2017-->
+
+<!-- Main purpose: to show you HTML forms, proper usage, and sytax.
+		The HTML <form> element defines a form that is used to collect user input -->
+
+<!-- References:
+
+    1) http://www.w3schools.com/html/html_forms.asp
+    2) http://www.w3schools.com/html/html_form_elements.asp
+    3) http://www.w3schools.com/html/html_form_input_types.asp
+    4) http://www.w3schools.com/html/html_form_attributes.asp
+
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Elements</title>
+        <style>
+          form {
+            
+          }
+
+        </style>
+    </head>
+    <body>
+
+      <!-- form usually invisible from user -->
+      <!-- action usually is form data sent to PHP file -->
+      <!-- the action specifices where data goes  -->
+      <!-- Method is way it gets there -->
+      <form action="index.html" method="post">
+        <!-- Text Input -->
+        <!-- default width is 20 characters  -->
+        <div>
+          <label for="user">Username:</label>
+          <input id="user" type="text" name="userName" value="" placeholder="Username">
+        </div>
+
+      </form>
+
+
+
+
+
+            <hr>
+
+             <!-- definitely a test question -->
+            <p class="center">Note that the form itself is not visible.</p>
+
+
+            <p class="center">Also note that the default width of a text input field is 20 characters.</p>
+            <hr>
+
+
+
+
+            <hr>
+
+            <p>Each input field must have a name attribute to be submitted.</p>
+            <p>If the name attribute is omitted, the data of that input field will not be sent at all.</p>
+
+            <hr>
+
+
+            <h3>What is your favorite dinosaur?</h3>
+
+
+
+
+            <h3>What are your interests?</h3>
+
+
+
+
+            <h3>What do you like to eat?</h3>
+
+
+
+            <p>This is a clickable button to do some action</p>
+
+
+
+            <h3>Comments?</h3>
+
+
+            <br><br>
+
+
+
+
+
+            <p>This is a datalist: </p>
+
+
+            <br><br>
+
+
+
+        <br>
+        <hr>
+        <br>
+
+        <!-- Reference:
+
+        http://www.w3schools.com/jsref/event_oninput.asp
+        -->
+
+
+        <br>
+        <hr>
+        <br>
+
+
+
+        <p>Depending on browser support:<br>A color picker can pop-up when you enter the input field.</p>
+
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+
+        <p><b>Note:</b> type="color" is not supported in Internet Explorer / Edge.</p>
+
+        <p>Depending on browser support:<br>A date picker can pop-up when you enter the input field.</p>
+
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+
+        <p><strong>Note:</strong> type="time" is not supported in Firefox, or Internet
+        	Explorer 10 and earlier versions.</p>
+
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+
+
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+
+        <p>Fill in and submit the form, then reload the page to see how autocomplete works.</p>
+        <p>Notice that autocomplete is "on" for the form, but "off" for the e-mail field.</p>
+
+    </body>
+</html>

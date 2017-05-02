@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS Kombat</title>
+		<link rel="stylesheet" type="text/css" href="css/stage.css">
+
+		<style>
+
+			/* goro attacks with a class */
+			.punch {
+				width: 1%;
+			}
+
+			/* sonya recovers with an ID */
+			#sonyaBlade {
+				width: 100%;
+			}
+
+			/* ID's have higher specificity */
+
+			/* sonya punches goro with an ID */
+			#goro {
+					visibility: hidden;
+			}
+
+			/*
+				winner = sonya blade
+				ID's win over classes in terms of specificity
+					goro's punch gets overridden by sonya's ID declaration
+
+				ID wins over default
+					The #goro attach overrides goro's default visibility
+
+			*/
+
+
+		</style>
+
+
+	</head>
+	<body>
+		<h2>CSS Mortal Kombat!</h2>
+		<div id="arena">
+			<div><img id="goro" src="images/goro2.png" alt="goro"></div>
+			<div><img id="sonyaBlade" class="punch" src="images/SonyaBlade1.jpg" alt="sonya"></div>
+		</div>
+	</body>
+</html>

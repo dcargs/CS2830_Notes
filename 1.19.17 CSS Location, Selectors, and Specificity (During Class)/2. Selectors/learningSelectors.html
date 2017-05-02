@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Selectors</title>
+
+			<style>
+			/* This is universal selector */
+				* {
+					margin: 10px;
+				}
+
+				/* instead of doing this we can group */
+				h1 {
+					text-align: center;
+				}
+
+				h2 {
+					text-align: center;
+				}
+
+				/* we can use grouping */
+				h1, h2 {
+					text-align: center;
+				}
+
+				/* ID selector
+					ID's of an element should be unique within a page!!
+					This means, ID selector is used to select one unique element
+				*/
+				#branding {
+					background-color: lightblue;
+					padding: 10px;
+				}
+
+				/* class selector */
+				.devin {
+					background-color: yellow;
+				}
+
+				.divClass {
+					text-align: center;
+					border: 2px solid black;
+				}
+
+				/* You can specify only specific HTML elements should
+				affected by a class */
+				div.post {
+					width: 600px;
+					text-align: justify;
+					text-justify: auto;
+					margin: 20px;
+					border: 2px solid black;
+					display: inline-block;
+				}
+
+
+				/* being more specific
+				 		this is a descendant combinator
+				*/
+				div.post img {
+					width: 200px;
+					height: 150px;
+
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				/* user action pseduo-class */
+				div.post img:hover {
+					box-shadow: 0 0 100px black;
+				}
+			</style>
+	</head>
+
+	<body>
+
+		<h1 id="branding"><img src="images/hang-loose.png" alt="hang loose"><br><br>Devin Cargill's Cool Photo Site</h1>
+
+		<h2 class="devin">Hillary Clinton or Donald Trump</h2>
+
+		<div class="divClass">
+
+				<div class="post">
+					<h2>First Photo</h2>
+					<img src="images/donald-hillary.jpg" alt="Donald & Hillary">
+					<p>
+						Hillary Diane Rodham Clinton (born October 26, 1947) is an American politician
+										and the nominee of the Democratic Party for President of the United States in
+										the 2016 election. She served as the 67th United States Secretary of State
+										from 2009 to 2013, the junior United States Senator representing New York
+										from 2001 to 2009, First Lady of the United States during the presidency
+										of Bill Clinton from 1993 to 2001, and First Lady of Arkansas during his
+										governorship from 1979 to 1981 and from 1983 to 1992.
+					</p>
+				</div>
+				<div class="post">
+						<h2>Second photo</h2>
+						<img src="images/obama.jpg" alt="Obama">
+						<p>
+							Donald John Trump (born June 14, 1946) is an American businessman,
+											television personality, author, politician, and the Republican Party
+											nominee for President of the United States in the 2016 election.
+											He is chairman of The Trump Organization, which is the principal
+											holding company for his real estate ventures and other business
+											interests. Born and raised in New York City, Trump received a bachelor's
+											degree in economics from the Wharton School of the University of
+											Pennsylvania in 1968.
+						</p>
+				</div>
+
+		</div>
+
+	</body>
+</html>

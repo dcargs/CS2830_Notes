@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Block vs Inline</title>
+    <meta charset = "utf-8">
+    <style>
+    h1 {
+      border: 2px solid black;
+    }
+
+    h2 {
+      text-decoration: line-through;
+      text-align: right;
+    }
+
+    p {
+      border: 2px solid red;
+      background-color: aqua;
+    }
+
+    div {
+      border: 5px solid blue;
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <!-- Note:
+        block element characteristics
+                * always start on a new line
+                * take up the full width available
+                  * their width is 100% of their parent container
+                  * they stretch out to the left and right as far as possible
+
+          the <div>, <h1> - <h6>, <p>, and <form> elements are block elements
+      -->
+
+      <div>
+        <h1>This is a header</h1>
+      </div>
+
+      <h2>This is header 2</h2>
+
+      <p>Hwllo world</p>
+
+      <!-- Note:
+          Inline element characteristics
+            - do not start a on a new line
+              -they are displayed next to each other
+            - only takes up as much width as necessary
+              -their width is based on their content
+
+          The <span>, <a>, <img> elements are inline elements
+      -->
+
+      <span>
+        Flatulence is defined in the medical literature as "flatus expelled through the anus" or the "quality or state of being flatulent",<br><br>[1] which is defined in turn as "marked by or affected with gases generated in the intestine or stomach; likely to cause digestive flatulence".<br><br>[2] The root of these words
+      </span>
+
+      <span>
+        Second span
+      </span>
+
+      <span>
+        Third span
+      </span>
+
+      <span>
+        Forth span
+      </span>
+
+      <p>This is parahgraph between the inline elements</p>
+
+      <span>
+        Fifth span
+      </span>
+
+      <span>
+        Sixth span
+      </span>
+
+      <a href="http://www.google.com">This is a link</a>
+
+      <img src="newYork.jpg" alt="new york">
+
+  </body>
+
+</html>

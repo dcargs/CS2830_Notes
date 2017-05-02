@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- This document was created by Professor Wergeles on Febuary 2, 2017 -->
+
+<!-- Main Purpose: To show you how to use transitions to make something valuable and
+		modern, such as polaroid pictures on a stylish page -->
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>CSS3 Polaroid Example</title>
+	<style>
+    /*CSS3 Fonts*/
+    @font-face {
+      src: url("fonts/PermanentMarker.ttf");
+      font-family: myFont;
+    }
+
+    body {
+      margin: 30px;
+      background-color: #E9E9E9;
+    }
+
+    @keyframes roll {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes wiggle {
+        0% {
+          transform: rotate(0deg);
+        }
+        20% {
+          transform: rotate(20deg);
+        }
+        40% {
+          transform: rotate(-25deg);
+        }
+        60% {
+          transform: rotate(30deg);
+        }
+        70% {
+          transform: rotate(0deg);
+        }
+        80% {
+          transform: scale(1.4, 1.4);
+        }
+    }
+
+    .polariod {
+      width: 520px;
+      padding: 10px 10px 20px 10px;
+      text-align: center;
+      border: 1px solid #888;
+      background-color: white;
+      font-size: 16pt;
+      position: relative;
+      font-family: myFont;
+      -webkit-transition: transform 0.5s;
+    }
+
+    .polariod:hover {
+      z-index: 1;
+
+      /*CSS3 Transformations*/
+      transform: rotate(0deg);
+      box-shadow: 0 0 10px #555;
+    }
+
+    .rotateLeft {
+      transform: rotate(-8deg);
+    }
+
+    .rotateRight {
+      transform: rotate(8deg);
+    }
+
+    .inline {
+      display: inline-block;
+    }
+
+    #polariodSpin:hover {
+      animation: roll 2s;
+    }
+
+    img {
+      height: 400px;
+      width: 500px;
+    }
+
+	</style>
+</head>
+<body>
+    <div class="inline">
+		<div class="inline polariod rotateLeft">
+			<img src="images/shanghai2.jpg" alt="pic1">
+			<h2>Shanghai, China</h2>
+		</div>
+		<div class="inline polariod rotateRight">
+			<img src="images/golden.jpg" alt="pic2">
+			<h2>Golden Gate Bridge</h2>
+		</div>
+		<div class="inline polariod rotateRight">
+			<img src="images/grand.jpg" alt="pic3">
+			<h2>Grand Canyon Arizona</h2>
+		</div>
+		<div id="polariodSpin" class="polariod inline rotateLeft">
+			<img src="images/missouri.jpg" alt="pic4">
+			<h2>Fall In Missouri</h2>
+		</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>CSS Columns Inline Block</title>
+        <style>
+
+
+          /* display: inline-block is different bc it allows
+          you to specify a width and a height */
+
+          /* NOTE: when using inline-block it will create
+          4px of space in between each div, considered
+          as white space */
+
+          /* Left physical width:
+              200px content width
+              4px border
+              ------------
+              204px  */
+
+          #left {
+            display: inline-block;
+            width: 200px;
+            height: 250px;
+            border: 2px solid pink;
+          }
+
+
+          /* middle or right physical width:
+              300px
+                4px
+            ----------
+              304px
+          */
+
+          #middle, #right {
+            display: inline-block;
+            height: 250px;
+            width: 300px;
+            border: 2px solid purple;
+          }
+
+          /* physical width
+              204
+              304
+          +   304
+            ------
+              812px
+          */
+
+          #columns {
+            width: 820px;
+            border: 5px solid powderblue;
+          }
+
+          /* NOTE: notice here we do not have to have a clear class */
+        </style>
+    </head>
+    <body>
+
+
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+
+            <div id="right">Right</div>
+
+
+        </div>
+    </body>
+</html>

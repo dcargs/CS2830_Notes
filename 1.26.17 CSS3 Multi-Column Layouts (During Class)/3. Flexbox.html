@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<!-- The main purpose is to go more in dept about flexbox and show you how to
+		make a webpage similar to the new york times -->
+
+<!-- Reference:
+     1)    https://www.css-tricks.com/snippets/css/a-guide-to-flexbox/
+-->
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>CSS3 Flexible Box Layout</title>
+		<style>
+
+			#columnWrapper {
+				border: 10px solid orange;
+				border-radius: 100px;
+				padding: 30px;
+				margin: 50px auto;
+
+				/* enable flex content on container (wrapper) */
+				display: flex;
+				flex-flow: row wrap;
+			}
+
+			#header {
+				flex: 100%;
+				text-align: center;
+			}
+
+			.column {
+				flex: 33%;
+				text-align: justify;
+				text-indent: 20px;
+				padding: 15px;
+				box-sizing: border-box;
+			}
+
+			.middle {
+				border-left: 2px solid slategrey;
+				border-right: 2px solid slategrey;
+			}
+
+			hr {
+				flex: 100%;
+				border-top: 2px solid slategrey;
+			}
+
+			/* to reorder stuff in columns */
+			.first {
+				order: 1;
+			}
+
+			.second {
+				order: 2;
+			}
+
+			.third {
+				order: 3;
+			}
+
+			.middleRow {
+				flex: 50%;
+				padding: 15px;
+				text-indent: 20px;
+				text-align: justify;
+				box-sizing: border-box;
+			}
+
+			.bottomRow {
+				flex: 25%;
+				padding: 15px;
+				text-indent: 20px;
+				text-align: justify;
+				box-sizing: border-box;
+			}
+
+			.onTheRight {
+				border-right: 2px solid slategrey;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="columnWrapper">
+			<h1 id="header">Web Development CS2830</h1>
+
+			<hr>
+
+						<!--Class Inhereitance-->
+            <div class="column">Computer science is the scientific and practical
+            	approach to computation and its applications. It is the systematic
+            	study of the feasibility, structure, expression, and mechanization
+            	of the methodical procedures (or algorithms) that underlie the acquisition,
+            	representation, processing, storage, communication of, and access to information.
+            	An alternate, more succinct definition of computer science is the study of
+            	automating algorithmic processes that scale. A computer scientist specializes
+            	in the theory of computation and the design of computational systems. ts fields
+            	can be divided into a variety of theoretical and practical disciplines. Some
+            	fields, such as computational complexity theory, are highly abstract, while
+            	fields such as computer graphics and <b>Web Development emphasize real-world
+            	visual applications</b></div>
+
+
+			<div class="column middle"><b>Information technology (IT) is the application of
+			computers and internet to store, retrieve, transmit, and manipulate data,[1] or
+			an information often in the context of a business or other enterprise.</b> [2]
+			IT is considered a subset of information and communications technology (ICT).
+			In 2012, Zuppo proposed an ICT hierarchy where each hierarchy level "contain
+			some degree of commonality in that they are related to technologies that facilitate
+			the transfer of information and various types of electronically mediated
+			communications."[3] Business/IT was one level of the ICT hierarchy.</div>
+
+
+            <div class="column">Web development is a broad term for the work involved in
+            developing a web site for the Internet (World Wide Web) or an intranet (a private network).
+            <b>Web development can range from developing the simplest static single page of plain
+            text to the most complex web-based internet applications, electronic businesses, and
+            social network services.</b> A more comprehensive list of tasks to which web development
+            commonly refers, may include web engineering, web design, web content development, client
+            liaison, client-side/server-side scripting, web server and network security configuration,
+            and e-commerce development. Among web professionals, "web development" usually refers to
+            the main non-design aspects of building web sites: writing markup and coding.</div>
+
+						<hr>
+
+						<div class="middleRow onTheRight">The Flexbox Layout (Flexible Box) module
+            (currently a W3C Last Call Working Draft) aims at providing a more efficient
+            way to lay out, align and distribute space among items in a container, even
+            when their size is unknown and/or dynamic (thus the word "flex").The main
+            idea behind the flex layout is to give the container the ability to alter
+            its items' width/height (and order) to best fill the available space
+            (mostly to accommodate to all kind of display devices and screen sizes).
+            A flex container expands items to fill available free space, or shrinks
+            them to prevent overflow.</div>
+
+            <div class="middleRow">Most importantly, the flexbox layout is direction-agnostic
+            as opposed to the regular layouts (block which is vertically-based and inline
+            which is horizontally-based). While those work well for pages, they lack
+            flexibility (no pun intended) to support large or complex applications
+            (especially when it comes to orientation changing, resizing, stretching,
+            shrinking, etc.). <b>Note: Flexbox layout is most appropriate to the
+            components of an application, and small-scale layouts, while the Grid
+            layout is intended for larger scale layouts.</b></div>
+
+						<hr>
+
+            <div class="bottomRow onTheRight">HyperText Markup Language (HTML) is the standard
+            markup language for creating web pages and web applications. With Cascading
+            Style Sheets (CSS), and JavaScript, it forms a triad of cornerstone technologies
+            for the World Wide Web.[1] Web browsers receive HTML documents from a webserver
+             or from local storage and render them into multimedia web pages. HTML describes
+             the structure of a web page semantically and originally included cues for the
+              appearance of the document.</div>
+
+
+			<div class="bottomRow onTheRight">HTML elements are the building blocks of HTML pages.
+			With HTML constructs, images and other objects, such as interactive forms may be
+			embedded into the rendered page. It provides a means to create structured documents
+			by denoting structural semantics for text such as headings, paragraphs, lists, links,
+			quotes and other items. HTML elements are delineated by tags, written using angle brackets.
+			 Tags such as img and input introduce content into the page directly. Others such as p ... p
+			 surround and provide information about document text and may include other tags as sub-elements.
+			 Browsers do not display the HTML tags, but use them to interpret the content of the page.</div>
+
+
+            <div class="bottomRow onTheRight">Cascading Style Sheets <b>(CSS)</b> is a style
+            sheet language used for describing the presentation of a document written in a
+            markup language.[1] Although most often used to set the visual style of web
+            pages and user interfaces written in HTML and XHTML, the language can be
+            applied to any XML document, including plain XML, SVG and XUL, and is applicable
+            to rendering in speech, or on other media. Along with HTML and JavaScript,
+            CSS is a cornerstone technology used by most websites to create visually
+            engaging webpages, user interfaces for web applications, and user interfaces
+            for many mobile applications.</div>
+
+            <div class="bottomRow"><b>BMX</b> began in the early 1970s in the United
+            States when children began racing their bicycles on dirt tracks in southern
+            California, inspired by the motocross stars of the time. The size and
+            availability of the Schwinn Sting-Ray and other wheelie bikes made them
+            the natural bike of choice for these races, since they were easily customized
+            for better handling and performance. BMX racing was a phenomenon by the
+            mid-1970s. Children were racing standard road bikes off-road, around
+            purpose-built tracks in California.[1] The 1972 motorcycle racing documentary
+             On Any Sunday is generally credited with inspiring the movement nationally
+             in the United States; its opening scene shows kids riding their Sting-Rays
+             off-road. By the middle of that decade, the sport achieved critical mass,
+             and manufacturers began creating bicycles designed especially for the sport.</div>
+		</div>
+	</body>
+</html>
+
+<!--
+
+
+            <div>The Flexbox Layout (Flexible Box) module
+            (currently a W3C Last Call Working Draft) aims at providing a more efficient
+            way to lay out, align and distribute space among items in a container, even
+            when their size is unknown and/or dynamic (thus the word "flex").The main
+            idea behind the flex layout is to give the container the ability to alter
+            its items' width/height (and order) to best fill the available space
+            (mostly to accommodate to all kind of display devices and screen sizes).
+            A flex container expands items to fill available free space, or shrinks
+            them to prevent overflow.</div>
+
+            <div>Most importantly, the flexbox layout is direction-agnostic
+            as opposed to the regular layouts (block which is vertically-based and inline
+            which is horizontally-based). While those work well for pages, they lack
+            flexibility (no pun intended) to support large or complex applications
+            (especially when it comes to orientation changing, resizing, stretching,
+            shrinking, etc.). <b>Note: Flexbox layout is most appropriate to the
+            components of an application, and small-scale layouts, while the Grid
+            layout is intended for larger scale layouts.</b></div>
+
+
+            <div>HyperText Markup Language (HTML) is the standard
+            markup language for creating web pages and web applications. With Cascading
+            Style Sheets (CSS), and JavaScript, it forms a triad of cornerstone technologies
+            for the World Wide Web.[1] Web browsers receive HTML documents from a webserver
+             or from local storage and render them into multimedia web pages. HTML describes
+             the structure of a web page semantically and originally included cues for the
+              appearance of the document.</div>
+
+
+			<div>HTML elements are the building blocks of HTML pages.
+			With HTML constructs, images and other objects, such as interactive forms may be
+			embedded into the rendered page. It provides a means to create structured documents
+			by denoting structural semantics for text such as headings, paragraphs, lists, links,
+			quotes and other items. HTML elements are delineated by tags, written using angle brackets.
+			 Tags such as img and input introduce content into the page directly. Others such as p ... p
+			 surround and provide information about document text and may include other tags as sub-elements.
+			 Browsers do not display the HTML tags, but use them to interpret the content of the page.</div>
+
+
+            <div>Cascading Style Sheets <b>(CSS)</b> is a style
+            sheet language used for describing the presentation of a document written in a
+            markup language.[1] Although most often used to set the visual style of web
+            pages and user interfaces written in HTML and XHTML, the language can be
+            applied to any XML document, including plain XML, SVG and XUL, and is applicable
+            to rendering in speech, or on other media. Along with HTML and JavaScript,
+            CSS is a cornerstone technology used by most websites to create visually
+            engaging webpages, user interfaces for web applications, and user interfaces
+            for many mobile applications.</div>
+
+            <div><b>BMX</b> began in the early 1970s in the United
+            States when children began racing their bicycles on dirt tracks in southern
+            California, inspired by the motocross stars of the time. The size and
+            availability of the Schwinn Sting-Ray and other wheelie bikes made them
+            the natural bike of choice for these races, since they were easily customized
+            for better handling and performance. BMX racing was a phenomenon by the
+            mid-1970s. Children were racing standard road bikes off-road, around
+            purpose-built tracks in California.[1] The 1972 motorcycle racing documentary
+             On Any Sunday is generally credited with inspiring the movement nationally
+             in the United States; its opening scene shows kids riding their Sting-Rays
+             off-road. By the middle of that decade, the sport achieved critical mass,
+             and manufacturers began creating bicycles designed especially for the sport.</div>
+ -->

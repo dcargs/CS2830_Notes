@@ -1,0 +1,67 @@
+.tab {
+  width: 200px;
+  padding: 20px;
+  margin: 50px;
+  border: 10px solid steelblue;
+  background-color: orange;
+  text-align: center;
+  font-size: 2em;
+
+  border-radius: 15px;
+
+  /*we could specify all of
+  rounding corners */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  border-radius: 30px 30px 0 0;
+}
+
+#corners1 {
+  border-radius: 15px;
+}
+
+ /*top left top right bottom right
+ bottom left*/
+#corners2 {
+  border-radius: 15px 50px 30px 5px;
+}
+
+#corners3 {
+  border-radius: 15px 15px 30px;
+}
+
+/*2 values-> top left and bottom right
+*/
+#corners4 {
+  border-radius: 15px 500px;
+}
+/*border-radius is shorthand for
+border-top-left, top right ...*/
+
+#corners5 {
+  border-radius: 50px/15px;
+  box-shadow: 10px 10px 50px blue;
+}
+
+#corners6 {
+  border-radius: 15px/50px;
+  box-shadow: 50px 50px 50px blue;
+}
+
+/* 50% will be half of height and
+width which will make the circle */
+#corners7 {
+  border-radius: 50%;
+  box-shadow: -20px -20px 10px 20px blue;
+}
+
+.planet {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: orange;
+  margin: 50px;
+  /* box shadow adds a 3D effect */
+  box-shadow: 0 0 50px blue;
+}

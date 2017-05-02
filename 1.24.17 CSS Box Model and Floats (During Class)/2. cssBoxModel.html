@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>CSS Box Model</title>
+        <!--
+          References
+            http://www.w3schools.com/css/css_boxmodel.asp
+            http://guyroutledge.github.io/box-model/
+        -->
+        <style>
+
+          /* calculate the physical width
+
+              content width:  250px
+              padding:        100px(left)
+              border:         20px
+              margin:         100px
+              total =         470px
+
+          */
+
+           #boxModel {
+             border: 10px solid powderblue;
+
+             /* content width */
+             width: 250px;
+             margin: 50px;
+             padding: 100px;
+             padding-right: 0px;
+
+             /* background-color includes the content and padding */
+             background-color: orange;
+             text-align: center;
+           }
+
+        </style>
+    </head>
+    <body>
+
+      <div id="boxModel">CSS Box Model</div>
+
+    </body>
+</html>
