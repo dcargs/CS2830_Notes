@@ -12,7 +12,7 @@
   require 'Template.php';
   $page = new Template();
   $page->data = $data;
-  
-  
+
+  print $page->build('videoPage.tmpl');
 
 ?>
