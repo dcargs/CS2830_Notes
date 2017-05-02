@@ -10,6 +10,7 @@ $menuItems[] = array('label' => 'Activities', 'link' => 'activities.php');
 $menuItems[] = array('label' => 'Contacts', 'link' => 'contacts.php');
 $menuItems[] = array('label' => 'Help', 'link' => 'help.php');
 $menuItems[] = array('label' => 'Login', 'link' => 'login.php');
+$menuItems[] = array('label' => 'Logout', 'link' => 'logout.php');
 
 // Specify the currently selected tab
 $currentPage = 'Contacts';
