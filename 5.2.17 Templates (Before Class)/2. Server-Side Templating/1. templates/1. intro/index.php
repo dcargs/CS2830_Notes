@@ -13,7 +13,7 @@
 
   $page2 = new Template();
   $page2->name = "Templates make life easier";
-  $result2 = $page->build('page.tmpl');
+  $result2 = $page2->build('page.tmpl');
 
   print $result2;
 
