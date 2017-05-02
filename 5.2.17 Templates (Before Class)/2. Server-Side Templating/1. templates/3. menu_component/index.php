@@ -30,6 +30,6 @@ $menuHTML = $result['html'];
 <link rel="stylesheet" href="<?php print $menuCSSFile; ?>" type="text/css">
 </head>
 <body>
-
+  <?= $menuHTML ?>
 </body>
 </html>
