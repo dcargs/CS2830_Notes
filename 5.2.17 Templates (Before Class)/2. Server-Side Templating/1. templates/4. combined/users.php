@@ -35,6 +35,7 @@ function buildMenu() {
 	$menuItems = array();
 	$menuItems[] = array('label' => 'Home', 'link' => 'index.php');
 	$menuItems[] = array('label' => 'Users', 'link' => 'users.php');
+	$menuItems[] = array('label' => 'CS2830', 'link' => 'cs2830.php');
 
 	$currentPage = 'Users';
 	$menu = new MenuComponent($menuItems, $currentPage);
