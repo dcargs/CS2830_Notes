@@ -10,7 +10,7 @@
 
 	$t1 = new Template();
 	$t1->users = $users;
-	$tableHTML = $t1->build('usersTable.php');
+	$tableHTML = $t1->build('usersTable.tmpl');
 	print $tableHTML;
 
 ?>
