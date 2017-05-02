@@ -8,6 +8,10 @@
 	$users[] = array('school' => 'KU', 'name' => 'Sally Smith', 'age' => 25, 'gender' => 'female');
 	$users[] = array('school' => 'KSU', 'name' => 'Karen Smith', 'age' => 23, 'gender' => 'female');
 
+	$t1 = new Template();
+	$t1->users = $users;
+	$tableHTML = $t1->build('usersTable.php');
+	print $tableHTML;
 
 ?>
 d
